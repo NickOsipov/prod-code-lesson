@@ -1,2 +1,14 @@
 venv
 .venv
+*.joblib
+__pycache__/
+.env
+.ipynb_checkpoints
+.DS_Store
+*.sqlite3
+*.db
+*.log
+*.pot
+.coverage
+htmlcov/
+.pytest_cache/
