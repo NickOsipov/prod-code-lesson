@@ -3,6 +3,7 @@ Script: pipeline.py
 Description: This script contains functions to create a machine learning pipeline that includes data preprocessing, model training
 """
 
+import os
 from sklearn.ensemble import RandomForestClassifier
 from loguru import logger
 
@@ -18,7 +19,7 @@ MODEL_PARAMS = {
     "max_depth": 10,
     "random_state": 42
 }
-MODEL_PATH = "model.joblib"
+MODEL_PATH = os.path.join("models", "model.joblib")
 
 
 def main():
