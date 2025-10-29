@@ -1,3 +1,4 @@
+import os
 import joblib
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
@@ -43,6 +44,7 @@ def save_model(model: RandomForestClassifier, model_path: str) -> None:
     model_path : str
         The file path where the model should be saved.
     """
+    os.makedirs(os.path.dirname(model_path), exist_ok=True)
     joblib.dump(model, model_path)
 
 

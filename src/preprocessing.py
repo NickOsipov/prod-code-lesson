@@ -22,6 +22,12 @@ def load_data() -> tuple:
     iris = load_iris()
     df = pd.DataFrame(data=iris.data, columns=iris.feature_names)
     df["target"] = iris.target
+    df = df.rename(columns={
+        'sepal length (cm)': 'sepal_length',
+        'sepal width (cm)': 'sepal_width',
+        'petal length (cm)': 'petal_length',
+        'petal width (cm)': 'petal_width'
+    })
     return df
 
 
